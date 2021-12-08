@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+// import { Greeting, Greeting2 } from './components/Greeting';s
+import Name from './components/Name';
+import { Calculator } from './components/Calculator';
 
 function App() {
   return (
@@ -17,6 +20,8 @@ function App() {
         >
           Learn React
         </a>
+        <Name firstName='jAiro' lastName='Rocano' />
+        <Calculator valorA='1' valorB='4' operador="resta" />
       </header>
     </div>
   );
