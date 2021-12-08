@@ -9,7 +9,7 @@ const verifyNumber = (dato) => {
     throw new Error('false')
   }
 }
-
+//Si es suma el operador que reciba n operandos
 export const Calculator = ({ valorA, valorB, operador }) => {
   try {
     let _valorA = verifyNumber(valorA)
@@ -21,11 +21,10 @@ export const Calculator = ({ valorA, valorB, operador }) => {
       resta: _valorA - _valorB
     }
 
-
     if (!operaciones[operador]) {
       return (
         <>
-          <h1>"Operacion no encontrada"</h1>
+          <h3>"Operacion no encontrada"</h3>
         </>
       )
     }
@@ -33,14 +32,14 @@ export const Calculator = ({ valorA, valorB, operador }) => {
     const _operacion = operaciones[operador]
     return (
       <>
-        <h1>Resultado de {operador} : {_operacion}</h1>
+        <h3>Resultado de {operador} : {_operacion}</h3>
       </>
     )
 
   } catch (error) {
     return (
       <>
-        <h1>No se puede procesar los datos</h1>
+        <h3>No se puede procesar los datos</h3>
       </>
     )
   }
