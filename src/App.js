@@ -3,6 +3,7 @@ import './App.css';
 // import { Greeting, Greeting2 } from './components/Greeting';s
 import Name from './components/Name';
 import { Calculator } from './components/Calculator';
+import { Counter } from './components/Counter';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
         </a>
         <Name firstName='jAiro' lastName='Rocano' />
         <Calculator valorA='1' valorB='4' operador="resta" />
+
+        <Counter />
+
       </header>
     </div>
   );
