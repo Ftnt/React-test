@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from 'react'
 
+//Styles
+import "./Counter.css";
+
 export const Counter = () => {
 
   const [counter, setcounter] = useState(0)
   const [otherCounter, setOtherCounter] = useState(0)
+
+  useEffect(() => {
+    console.log("Me ejecuto siempre")
+  }, [otherCounter])
 
   useEffect(() => {
     console.log("Me ejecuto solo la primera vez")
@@ -21,8 +28,8 @@ export const Counter = () => {
     <div>
       <p> Counter: {counter} </p>
       <p> Counter % 3: {otherCounter} </p>
-      <button onClick={() => { setcounter(counter + 1) }}>+1 </button>
-      <button onClick={() => { setcounter(counter - 1) }}>-1</button>
+      <button className="btn" onClick={() => { setcounter(counter + 1) }}>+1 </button>
+      <button className="btn" onClick={() => { setcounter(counter - 1) }}>-1</button>
     </div>
   )
 }

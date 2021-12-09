@@ -21,8 +21,8 @@ function App() {
         >
           Learn React
         </a>
-        <Name firstName='jAiro' lastName='Rocano' />
-        <Calculator valorA='1' valorB='4' operador="resta" />
+        {/* <Name firstName='jAiro' lastName='Rocano' /> */}
+        {/* <Calculator valorA='1' valorB='4' operador="resta" /> */}
 
         <Counter />
 
