@@ -20,3 +20,11 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.text-even {
+  color: aquamarine;
+}
+
+.text-odd {
+  color: tomato;
+}
