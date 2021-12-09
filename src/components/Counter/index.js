@@ -7,10 +7,8 @@ export const Counter = () => {
 
   const [counter, setcounter] = useState(0);
 
-  let colorCount = 'text-odd';
-  if (counter % 2 === 0) {
-    colorCount = 'text-even';
-  }
+  let colorCount = counter % 2 === 0 ? 'text-even' : 'text-odd';
+
 
   return (
     <div>
