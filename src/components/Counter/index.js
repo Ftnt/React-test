@@ -9,7 +9,6 @@ export const Counter = () => {
 
   let colorCount = counter % 2 === 0 ? 'text-even' : 'text-odd';
 
-
   return (
     <div>
       <p className={colorCount}> Counter: {counter} </p>

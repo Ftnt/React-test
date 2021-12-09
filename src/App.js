@@ -4,6 +4,7 @@ import './App.css';
 // import Name from './components/Name';
 // import { Calculator } from './components/Calculator';
 import { Counter } from './components/Counter';
+import { NavBar } from './components/NavBar';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         {/* <Calculator valorA='1' valorB='4' operador="resta" /> */}
 
         <Counter />
+        <NavBar />
 
       </header>
     </div>
