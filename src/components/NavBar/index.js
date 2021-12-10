@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { BodyNavBar } from '../BodyNavBar';
+
 
 import './NavBar.css';
 
@@ -20,9 +22,9 @@ export const NavBar = () => {
         <li className={checkActive(3)} onClick={() => handleClick(3)}>Item3</li>
       </ul>
       <div>
-        {active === 1 ? <p>Hola1</p> : ''}
-        {active === 2 ? <p>Hola2</p> : ''}
-        {active === 3 ? <p>Hola3</p> : ''}
+        {active === 1 ? <BodyNavBar datos="Hola1" /> : ''}
+        {active === 2 ? <BodyNavBar datos="Hola2" /> : ''}
+        {active === 3 ? <BodyNavBar datos="Hola3" /> : ''}
       </div>
     </div>
 
