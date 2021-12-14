@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const BodyNavBar = ({ datos }) => {
+export const ContentNavBar = ({ datos }) => {
   return (
     <div>
       <p>{datos}</p>
