@@ -43,13 +43,40 @@
   }
 }
 
-.container{
-  width: 100vw;
+.flex{
   display: flex;
   justify-content: center;
-  position: fixed;
-  top: 15px;
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
+  background-color: #282c34;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  gap: 2rem;
+  border: none;
+  margin-left: 20px;
+  font-size: 25px;
+}
+
+label{
+  color: white;
+  font-weight: bold;
+  font-size: large;
 }
 
 .btn{
