@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   max-width: 1920px;
   gap: 1rem;
-  margin: 3rem auto;
+  margin: 5rem auto;
 }
 
 .App-logo {
@@ -43,8 +43,27 @@
   }
 }
 
-/* body{
-  max-width: 1920px;
-  margin: auto;
-  padding: 3rem 0;
-} */
+.container{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 15px;
+  gap: 2rem;
+}
+
+.btn{
+  width: 150px;
+  height: 45px;
+  color: white;
+  background-color: blue;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: rgb(29, 29, 126);
+  transform: scale(.95);
+}

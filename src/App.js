@@ -1,24 +1,36 @@
 import "./App.css";
-import { Counter } from "./components/Counter";
-import NavBar from "./components/NavBar";
 import { useEffect, useState } from "react";
-import Line from "./components/Line";
 import Card from "./components/Card";
+import { listCharacters } from "./services/characters";
 
 function App() {
   const [card, setCard] = useState([]);
+  const [dataInfo, setDataInfo] = useState({});
 
   useEffect(() => {
-    const getPersonajes = async () => {
-      const response = await fetch(
-        "https://rickandmortyapi.com/api/character/"
-      );
-      const data = await response.json();
-      console.log(data.results);
-      setCard(data.results);
+    const name = async () => {
+      const { results, info } = await listCharacters();
+      setCard(results);
+      setDataInfo(info);
     };
-    getPersonajes();
+    name();
   }, []);
+
+  const handleClick = async (action) => {
+    if (action === "next" && dataInfo.next !== null) {
+      const page = dataInfo.next.split("?")[1];
+      const { results, info } = await listCharacters(page);
+      setCard(results);
+      setDataInfo(info);
+    }
+
+    if (action === "prev" && dataInfo.prev !== null) {
+      const page = dataInfo.prev.split("?")[1];
+      const { results, info } = await listCharacters(page);
+      setCard(results);
+      setDataInfo(info);
+    }
+  };
 
   const cardUI = card.map(({ id, name, status, species, image }) => (
     <Card
@@ -32,12 +44,15 @@ function App() {
 
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <Line color="#ff000045"></Line>
-        <Counter />
-        <NavBar />
-      </header> */}
-      {cardUI}
+      <div className="container">
+        <button className="btn" onClick={() => handleClick("prev")}>
+          Prev
+        </button>
+        <button className="btn" onClick={() => handleClick("next")}>
+          Next
+        </button>
+      </div>
+      {setCard && cardUI}
     </div>
   );
 }
