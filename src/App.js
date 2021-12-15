@@ -42,12 +42,26 @@ function App() {
     />
   ));
 
-  return (
-    <div className="App">
-      <div className="container">
+  const infoPrevNext = () => {
+    if (dataInfo.prev === null) {
+      return (
+        <button className="btn" disabled>
+          Prev
+        </button>
+      );
+    } else {
+      return (
         <button className="btn" onClick={() => handleClick("prev")}>
           Prev
         </button>
+      );
+    }
+  };
+
+  return (
+    <div className="App">
+      <div className="container">
+        {infoPrevNext()}
         <button className="btn" onClick={() => handleClick("next")}>
           Next
         </button>

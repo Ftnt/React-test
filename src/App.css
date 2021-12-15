@@ -63,6 +63,16 @@
   cursor: pointer;
 }
 
+
+.btn:disabled,
+.btn[disabled]:hover{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  transform: scale(1);
+  border: none;
+}
+
 .btn:hover{
   background-color: rgb(29, 29, 126);
   transform: scale(.95);
