@@ -16,8 +16,21 @@ function App() {
     <div className="container">
       <CardCredit numberCard={numberCard} />
       <form className="form">
-        <div>
-          {/* <label htmlFor="input1">Titulo : </label> */}
+        <div className="">
+          <input
+            id="input1"
+            type="text"
+            onChange={handleChange}
+            pattern="[0-9]{0,13}"
+            mask="0000 0000 0000"
+            value={numberCard}
+          />
+          <input
+            id="input1"
+            type="text"
+            onChange={handleChange}
+            value={numberCard}
+          />
           <input
             id="input1"
             type="text"
