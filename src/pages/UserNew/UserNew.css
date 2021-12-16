@@ -1,0 +1,13 @@
+.container{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(15, 11, 36);
+  color: white;
+  box-sizing: border-box;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+  
+}
