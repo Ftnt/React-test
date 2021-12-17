@@ -13,4 +13,9 @@ const createUser = async (data) => {
   return await response.json();
 };
 
-export { createUser };
+const getUser = async () => {
+  const response = await fetch(`${BASE_URL}${USER_PATH}`);
+  return await response.json();
+};
+
+export { createUser, getUser };
